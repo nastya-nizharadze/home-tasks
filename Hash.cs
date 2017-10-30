@@ -49,7 +49,7 @@ namespace md5
         }
 
 
-        static void Main(string[] args)
+        static void Main()
         {
             string path = "";
             Console.WriteLine ("write path to folder: ");
