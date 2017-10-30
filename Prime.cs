@@ -160,7 +160,7 @@ namespace prime
                     time = time_threads.ElapsedMilliseconds;
                 }
                 if (count == 0) count = 1;
-                Console.Write("There is/are {0} thread/s. There are/is {1} prime number/s, {2} time spended, range = {3}\n", count, global_list.Count, time_threads.Elapsed, range);
+                Console.Write("There is/are {0} thread/s. There are/is {1} prime number/s, {2} time spent, range = {3}\n", count, global_list.Count, time_threads.Elapsed, range);
 
                 //global_list.Sort();
                 //foreach (int number in global_list) Console.WriteLine(number);
@@ -186,7 +186,7 @@ namespace prime
             Create_queue_Ex(pr_from, pr_to);
             allDone.WaitOne();
             time_threads.Stop();
-            Console.Write("ThreadPool. There are/is {0} prime number/s, {1} time spended\n",global_list.Count, time_threads.Elapsed);
+            Console.Write("ThreadPool. There are/is {0} prime number/s, {1} time spent\n",global_list.Count, time_threads.Elapsed);
             global_list.Clear();
             count = 0;
             //global_list.Sort();
@@ -201,7 +201,7 @@ namespace prime
             time_threads.Restart();
             Create_tasks(pr_from, pr_to);
             time_threads.Stop();
-            Console.Write("Tasks. There are/is {0} prime number/s, {1} time spended\n", global_list.Count, time_threads.Elapsed);
+            Console.Write("Tasks. There are/is {0} prime number/s, {1} time spent\n", global_list.Count, time_threads.Elapsed);
 
             //global_list.Sort();
             //foreach (int number in global_list) Console.WriteLine(number);
