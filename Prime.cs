@@ -175,7 +175,7 @@ namespace prime
             //THREADPOOL
             completed = 0;
             toComplete = 1;
-            range = opt_range/10; 
+            range = (opt_range/10)+1; 
             int buffer = pr_to;
             while (buffer > range)
             {
