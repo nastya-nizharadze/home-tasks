@@ -27,3 +27,19 @@ C:\folder\mine\archive\photos
 
 
 Time spent: 00:12:33.5384595; Directory MD5 hash: c2af0d89377ff3f4dc43609c8e8372a6
+
+
+# task 3: parallel BST
+number of keys: 10000000
+
+parallel insert: 00:00:19.1533252
+
+parallel find: 00:00:14.2679645
+
+parallel delete: 00:00:07.5998713
+
+non parallel insert: 00:00:27.3198529
+
+non parallel find: 00:00:22.3289881
+
+non parallel delete: 00:00:11.5130065
