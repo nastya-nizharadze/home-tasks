@@ -4,48 +4,19 @@ using System.Threading.Tasks;
 namespace Scan
 {
 
-    internal class Register
+    public class Register
     {
-        static Object updLock = new Object();
+        static Object lockobj = new Object();
 
-        private int id;
-        private int data;
-        private bool[] bitmask;
-        private bool toggle;
-        private int[] view;
-
-        public Register(int data, int id, int n)
-        {
-            this.id = id;
-            this.data = data;
-            bitmask = new bool[n];
-            view = new int[n];
-        }
-
-        public bool[] GetBitmask()
-        {
-            return bitmask;
-        }
-
-        public bool GetToggle()
-        {
-            return toggle;
-        }
-
-        public int GetData()
-        {
-            return data;
-        }
-
-        public int[] GetView()
-        {
-            return view;
-        }
+        public int id;
+        public int data;
+        public bool[] bitmask;
+        public bool toggle;
+        public int[] view;
 
         public void AtomicUpdate(int newData, bool[] newBitmask, bool newToggle, int[] snapshot)
         {
-
-            lock (updLock)
+            lock (lockobj)
             {
                 this.bitmask = newBitmask;
                 this.toggle = newToggle;
